@@ -1,0 +1,26 @@
+﻿<Window x:Class="Abschlussprojekt_Passwortmanager.AccountAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Abschlussprojekt_Passwortmanager"
+        mc:Ignorable="d"
+        Title="Account Anlegen" Height="430" Width="500">
+    <Grid x:Name="AccountsAdd">
+        <Label x:Name="lblPlattform" Content="Plattform:" HorizontalAlignment="Left" Margin="50,96,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBenutzer" Content="Benutzername:" HorizontalAlignment="Left" Margin="50,146,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPasswort" Content="Ihr neues Passwort ist: " HorizontalAlignment="Left" Margin="50,296,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPlattform" HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtPlattform_TextChanged"/>
+        <TextBox x:Name="txtBenutzer" HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtBenutzer_TextChanged"/>
+        <Label x:Name="lblLaenge" Content="Passwortlänge:" HorizontalAlignment="Left" Margin="50,196,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnPasswortgenerieren" Content="Passwort generieren" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top" Click="btnPasswort_Click"/>
+        <Button x:Name="btnAccountShow" Content="Accounts anzeigen" HorizontalAlignment="Left" Margin="280,350,0,0" VerticalAlignment="Top" Width="136.013333333333" Click="btnAccountShow_Click"/>
+        <Button x:Name="btnAccountAdd" Content="zum Account hinzufügen" HorizontalAlignment="Left" Margin="80,350,0,0" VerticalAlignment="Top" Click="btnAccountAdd_Click"/>
+        <Label HorizontalAlignment="Center" Margin="0,214,0,0" VerticalAlignment="Top" Height="26"/>
+        <Slider x:Name="woSlider" HorizontalAlignment="Center" Minimum="6" Maximum="30" TickFrequency="1" IsSnapToTickEnabled="True" Value="6" Margin="0,196,0,0" VerticalAlignment="Top" Width="120" ValueChanged="Slider_ValueChanged"/>
+        <TextBlock Text="{Binding ElementName=PasswordLengthSlider, Path=Value}" HorizontalAlignment="Center"/>
+        <Label x:Name="lblBegruessung" Content="" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" Width="220" FontSize="16"/>
+        <TextBox x:Name="txtGenPW" HorizontalAlignment="Left" Margin="195,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+    </Grid>
+</Window>
+
